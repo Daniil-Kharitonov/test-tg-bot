@@ -12,8 +12,8 @@ dispatcher = updater.dispatcher
 
 
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Привет, я бот погоды, введи город, чтобы узнать погоду в нем")
-
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Привет, я бот погоды")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Введи город, чтобы узнать погоду в нем")
 
 def get_weather(update, context):
     weather = requests.get(f'https://wttr.in/{update.message.text}?format=3')
