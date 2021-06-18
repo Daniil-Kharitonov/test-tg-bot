@@ -1,12 +1,15 @@
 #The test bot
 
+import os
 import requests
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 
 
-updater = Updater(token='1825942069:AAHhJsxw7msxE2beYDQcCsBr4nPjBLnl6K4', use_context=True)
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+
+updater = Updater(token=BOT_TOKEN, use_context=True)
 
 dispatcher = updater.dispatcher
 
